@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- {% load static %} -->
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" 
+        crossorigin="anonymous">
+
+    </head>
+    
+    <body >
+
+        <h1>Hello, Welcome to Users page. Below is your users list. </h1>
+        
+        {% if userInfo %}
+        <ol>
+            {% for user in userInfo %}
+                <li> User Info </li>
+                <ul> 
+                    <li> First name: {{user.first_name}} </li>
+                    <li> Last name: {{user.last_name}} </li>
+                    <li> Email: {{user.email}} </li>
+                </ul>
+            {% endfor %}
+        </ol>
+        {% else %}
+            <p> No record found </p>
+        {% endif %}
+        
+        <div>
+            <h2> User Sign Up Page ! </h2>
+        <form action="" method="post">
+                
+            {{form.as_p}}
+            {% csrf_token %}
+
+            <!-- <label for="your_name">Your name: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+            <label for="email">Your email: </label>
+            <input id="email" type="email" name="your_email" value="{{ current_email }}">
+            <label for="pass">Your name: </label>
+            <input id="pass" type="password" name="your_pass" value="{{ current_pass }}">
+            <input type="submit" value="OK"> -->
+            
+            <input type="submit" class="btn btn-primary" value = 'Submit'>
+            
+        </form>
+
+        </div>
+        
+
+    </body>
+</html>

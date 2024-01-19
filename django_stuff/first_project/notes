@@ -1,0 +1,126 @@
+Steps:
+
+https://docs.djangoproject.com/en/4.2/intro/tutorial01/
+
+1. Starting a project... django-admin startproject practice_project  ## This is like the complete web application. You will create Apps inside this. 
+
+2. cd practice_project
+
+3. Creating an App ...  python .\manage.py startapp practice_app
+
+4. Try testing is .. python .\manage.py runserver
+
+5. Now,  you can add urls in the urls.py of firstproject which become the base. 
+    e.g. you can import base URL from first app views. 
+6. You can add more URLs by creating a  new urls.py file in first app. 
+    all these new urls in urls.py of project.
+
+7. Adding Templates: Basically you are creating an html page which will be used in the views.py as HTTP response or by rendering it. You can add variables directly. 
+
+    1. Create Template folder under first_project
+    2. Create first_app folder and add html file 
+
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
+Now, add this template DIR to setting.py file.
+    
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [TEMPLATE_DIR],
+
+
+8. Similarly i.e. template you create static folder for providing static files (Could be media, css, js files) in html.
+
+    STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+    # Adding Static foilder 
+    STATIC_URL = 'static/'
+
+    STATICFILES_DIRS = [
+        STATIC_DIR,
+        ]
+
+9. To load media, 
+    {%% load static %%}
+
+    E.g. <img src="{% static 'images/vasu_s_gaitonde.jpg' %}" 
+            alt="painting by Vasudeo S Gaitonde" 
+            width="1000" 
+            height="600" >
+
+    Similarly styling can be loaded like this: 
+        <link rel="stylesheet" href="{% static 'css/styling.css' %}">
+
+10. Adding models: Creating database which will used for storing and extracting data. 
+
+    You define class which defines databases. 
+
+    e.g. 
+    Defining a table which contains topics name and it is a primarykey
+
+    from django.db import models
+    class  topic(models.Model):
+
+        topic_name  = models.CharField(max_length = 264, unique = True)
+
+        def __str(self)__:
+            return self.topic_name
+
+    Once, it is defined: 
+    Then to migrate: Commands - 
+        1. python manage.py migrate
+        2. python manage.py makemigrations first_app
+        2. python manage.py migrate
+
+11. Once done. You can quickly add data using shell or register these models in admin.py. 
+    ... Adding data from shell: 
+        python .\manage.py shell
+
+        from first_app.models import Topic
+
+        print(Topic.objects.all())
+
+        t = Topic(topic_name = 'Social Network')
+        t.save()
+
+
+        from first_app.models import Topic, Webpage, AccessRecord
+
+        # Register your models in admin.py  of first_app
+
+        admin.site.register(Topic)
+
+12. Create a superuser to access these tables.
+    
+    python .\manage.py createsuperuser
+
+
+
+    username: anshul
+    email: singhanshul31@gmail.com
+    password: 267766ks
+
+    python manage.py runserver
+    Access admin page: http://127.0.0.1:8000/admin/
+
+13. Adding some fake data: 
+    set environment:
+    import os
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'first_project.settings')
+
+
+14. Using data from models.
+    1. In views.py, we import the model we want to use.
+    2. We query the model/table for data that we need. 
+    3. Pass results from the model to the template. 
+    4. Edit the template so that it accepts /and can display the data from the model. 
+    5. Map the URL to view.
+
+15. Using Forms to get user data
+Complete View:
+https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/learn/lecture/6616176#overview
+ 
+
+Check Later:
+How to host my django website using wordpress and hostinger?

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> first app using Django! </title>
+        <link rel="stylesheet" href="{% static 'css/styling.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" 
+        crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <div class="jumbotron">
+                <h1 align="center" > This is my index.html from templates! </h1>
+            </div>
+            
+            <style>
+                h2{
+                    color: blue;
+                    background-color: orange;
+                }
+            </style>
+
+            <!-- <h2 align="center"> {{define_variable}} </h2> -->
+
+            <img src="{% static 'images/vasu_s_gaitonde.jpg' %}" 
+            alt="painting by Vasudeo S Gaitonde" 
+            width="1000" 
+            height="600" >
+            
+
+            <div class="django_l2">
+                {% if access_records %}
+                <table>
+                    <thead>
+                        <th> Website </th>
+                        <th> Date Accessed </th>
+                    </thead>
+
+                    {% for acc in access_records %}
+                    <tr> 
+                        <td>{{ acc.name }}</td>
+
+                        <td>{{ acc.date }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                
+                {% else %}
+                    <p>No Records found ! </p>
+                {% endif %}
+            </div>
+        </div>
+        
+    </body>
+
+</html>

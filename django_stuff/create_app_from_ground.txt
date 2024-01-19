@@ -1,0 +1,56 @@
+Commands:
+
+django-admin startproject <project_name>
+cd <project_name>
+
+python manage.py startapp <app_name>
+
+create templates folder
+This folder will contain index.html file along with other html files inside the folder similar name as folder.
+
+Adding Templates and app to setting.py: 
+Create TEMPLATE_DIR file: where you join base path and template folder
+In the template list you add this new TEMPLATE_DIR
+Further, you add app name in the intalled apps
+
+
+Now:
+Go to models file.
+	Add attributes/fields:
+
+Call templates and models in views.py
+define function based view which takes in request from each page and show in the html. 
+
+
+Under app creates url.py file:
+	define all the url_pattern which you are going to call in the project url
+
+
+Under project urls add these urls from app using include or simply using path
+
+migrate all the defined models to create datatable schema
+python manage.py migrate
+
+register those changes
+python manage.py makemigrations <app_name>
+
+again run migration command
+python manage.py migrate 
+
+# Updating admin.py to register as admin
+simply import models and register them in the admin 
+
+Then Run server
+python manage.py runserver
+
+Lets create a super user using manage.py file
+python manage.py createsuperuser
+
+python manage.py migrate
+
+Populating some data
+### Password Setting for users
+
+
+
+
