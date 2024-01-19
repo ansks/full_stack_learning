@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <meta charset="utf-8">
+        <title> Connect 4 Game</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" 
+        crossorigin="anonymous">
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous">
+        </script>
+
+        <link rel="stylesheet" href="jQuery_project.css">
+
+    </header>
+
+    <body>
+        <!-- <div class="container">
+
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li id = 'three'>Item 3</li>
+            </ol>
+            
+            <input type="text" value="enter text">
+            <input type="button" value="Submit">
+        </div> -->
+
+        
+
+        <!-- <style>
+            .blueClass{
+                color: blue;
+                border: 20px solid red;
+            }
+            .redClass{
+                color: red;
+                border: 20px solid blue;
+            }
+        </style> -->
+        
+        <div class="container" align="center">
+            <!-- <div class="jumbotron"> -->
+                <h1> Welcome to Connect Four! </h1>
+                
+                <h2> The object of the game is to  connect four of your chips in a row. </h2>
+
+                <h3>Player One: it is your turn, please pick a column to drop your blue chips. </h3>
+            <!-- </div> -->
+            
+            <!-- Jose's Solution -->
+            <table class="board" >
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+
+                <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                </tr>
+            </table>
+
+
+            <!-- <style>
+                td{
+                    height: 100px;
+                    width: 100px;
+                    background-color: orange;
+                    border-radius: 50%;
+                    display: inline-block;
+                    border: black 2px solid; 
+                    margin: 1px;
+                    }
+            </style> -->
+
+            <!-- <table class = 'table' align="center">
+                <tr id = 'r1'>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                </tr>
+
+                <tr id = 'r2'>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                </tr>
+
+                <tr id = 'r3'>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                </tr>
+
+                <tr id = 'r4'>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                </tr>
+
+                <tr id = 'r5'>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                </tr>
+
+                <tr id = 'r6'>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                </tr>
+
+                
+            </table> -->
+
+        </div>
+            
+
+        <script src="jQuery_project.js"></script>
+
+    </body>
+
+</html>

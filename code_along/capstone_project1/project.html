@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <title> Submit Form</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="project.css">
+        
+        <!-- Adding font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+    </header>
+
+    <body>
+        
+        <h1> Welcome to Landing Page </h1>
+        <h2> We are a parking solution startup. We help you to find the best match for your unutilised parking space.</h2><br>
+        <h3> Mission </h3>
+        <p id = 'mission 1'>Our goal is to find you the best buyer to maximize your rental income on your 
+            unutilised parrking space as per your convenience. It works for both shortt term and long term basis. </p>
+        <p id = 'mission 2'> We dont just stope there. We provide end to end execution. 
+            From listing your parking space, to finding buyer and providing pick and drop of your access card with 
+            utmost security. And Last but not least, providing a hastle free rental income. 
+            <ol class = "list1"> 
+                <li > Listing your parking space with as much details</li>
+                <li> Creating a contract for your parking space </li>
+                <li> Providing auction mechanism to maximise the value of the parking space </li>
+                <li> Pick up and drop of your access cards. </li>
+                <li> All our parkers are legal car parker and have gone through background check. </li>
+            </ol>
+        </p><br>
+        
+        <h2> Sign up for upcoming launch. </h2>
+
+        <form class = "email_form" action="thank_you.html" method="get">
+            
+            <label for="first"> First Name</label><br>
+            <input type="text" name="first" placeholder = "Hugh" required><br>
+            
+            <label for="last"> Last Name</label><br>
+            <input type="text" name="last" placeholder="Jackman" required><br>
+            
+            <label for="email"> Your Amazing Email Adderess </label><br>
+            <input type="email" name="email" placeholder = "jackman.hugh@email.com" required><br>
+            
+            <input id ="sub" type="submit"  value="Sign me up!">
+        </form>
+
+    
+
+    </body>
+
+    <script src="project.js"></script>
+
+</html>

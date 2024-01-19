@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <title>learning 2</title>
+        <link rel="stylesheet"  href="basics1.css">
+    </head>
+
+    <p>In this session, we will start with input methods</p>
+    <h1>Input the required values</h1>
+    <h2>Enter your username and password</h2>
+    <!-- Form without any action -->
+    <form>
+        <input type="email">
+        <input type="password">
+        <input type="submit" text = 'Submit'>
+    </form>
+    <form>
+        <input type="color" name="pick a color" id="">
+    </form>
+
+    <!-- Form with an action where it uses a external link after submit. It will retain the "name from text" it takes the input. -->
+    <form action="https://www.facebook.com" method="get">
+        <p>User text</p>
+        <input type="text" name="usertext">
+        <input type="submit" name="" id="" value="submit">
+    </form>
+
+
+    <form>
+        <p>Enter email:</p>
+        <input type="email" name="username" id="">
+        <input type="submit" name="" value="Click">
+    </form>
+    <br>
+
+    <!-- using label to keep the input box at the same level -->
+    <form>
+        Enter some text:
+        <!-- for is a parameter assigment where all the ids assigned to userinput can be modified together. -->
+        <label for="userinput">
+            <input type="text" name="" id="userinput" placeholder="Text1" required>
+            <input type="text" name="" id="" value="Text2">
+            <input type="submit" name="">
+        </label>
+    </form>
+
+    
+    <div>
+    <!-- Creating a form for feedback -->
+    <h1> Please <span> fill out </span> the feedback form to improve your exerience. </h1>
+    <!-- to have only or click on one option use same name value. -->
+    
+        <form>
+            <h2> Are you studying python for the first time?</h2>
+            <label for="yes_python">Yes</label>
+            <input id ="yes_python" type="radio" name="learn" value="yes">
+    
+            <label for="no_python"> No </label>
+            <input id="no_python" type="radio" name="learn" value="no">
+    
+            <h2> How many years of work experience do you have?</h2>
+            <select name="workex_years">
+                <option value="no_experience">0</option>
+                <option value="1 year">1</option>
+                <option value="2 years">2</option>
+                <option value="more than 2 years">2+</option>
+            </select>
+    
+            <h2>Can you provide a small summary about you?</h2>
+            <textarea name="summary", rows="8" cols="100">
+            </textarea>
+            <br>
+            <input type="submit" name="">
+    
+        </form>
+    </div>
+    
+    
+    <div class="testClass">
+        <p>
+            This is a test division.
+        </p>
+    </div>
+    
+    <p id="endID"> + modifying a single ID + </p>
+
+    <h6> What do we need to create a cup of tea? </h6>
+    <ul>
+        <li> Water</li> <input type="text">
+        <li> Tea Leafs</li> <input type="checkbox">
+        <li> Milk</li> <input type="email">
+        <ol>
+            <li><a href="www.life.com">Life</a></li>
+            <li><a href="www.wtflife.com">WTF Life</a></li>
+        </ol>
+    </ul>
+
+    
+    
+
+</html>

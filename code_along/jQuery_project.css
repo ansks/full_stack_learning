@@ -1,0 +1,19 @@
+/* td{
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    border: black 2px solid;
+    margin: 1px;
+} */
+
+.board button{
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    border: black 4px solid;
+    margin: 1px;   
+}

@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    margin: auto;
+    font-family: 'Young Serif', serif;
+    
+}
+
+td{
+    height: 300px;
+    width: 100px;
+    border: 10px white solid;
+}
+
+#row{
+    text-align: center;
+    margin: auto; 
+    padding-top: 50px;
+}
+
+#one{
+    background-color: #F6BD60;
+}
+
+#two{
+    background-color: #F7EDE2;
+}
+
+#three{
+    background-color: #F5CAC3;
+}
+
+#four{
+    background-color: #84A59D;
+}
+
+#five{
+    background-color: #F28482;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Exercise 2</title>
+    </head>
+    <body>
+        <h1>Course Sign Up Page</h1>
+        <p>Please Note: First Name, Last Name, Email and Password are required. </p>
+        <form >
+            <label for="basic_info">First Name:</label>
+            <input type="text" name = "basic_info" placeholder="First Name" required>
+            <label for="basic_info">Last Name:</label>
+            <input type="text" name="basic_info" placeholder="Last Name" required>
+            
+            <p></p>
+            <label for="credentials">Email:</label>
+            <input type="email" placeholder="name@emai.com" required>
+            <label for="credentials">Password:</label>
+            <input type="password" required>
+
+            <p>Are you over 18?</p>
+            <label for="age">Yes</label>
+            <input name = "age" type ="radio" value="yes">
+            <label for="age">No</label>
+            <input name = "age" type ="radio" value="no">
+
+            <p>Do you have a Credit Card or Paypal?</p>
+            <select>
+                <option value="CC">Credit Card</option>
+                <option value="PP">Paypal</option>
+            </select>
+            
+            <p></p>
+            <input type="submit" name="Submit" id="">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+/* 
+selected tag{
+    property: value
+}
+*/
+
+/* 
+We will be using this css style file in "basics2.html"
+*/
+
+h1 {
+    color: red
+}
+
+h2 {
+    color: rgb(223, 95, 135);
+}
+
+p {
+    color: #325ea0
+}
+
+#yes_python {
+    color: grey
+}
+
+
+
+
+body {
+    /* background-color: rgb(202, 176, 176); */
+    background-image: url(https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRCCmoea4cozesPkjXuFdOi7uT9qmavnWUnUZ8kqREklhYtJcn7-mCnJwX7BZuS5UP6);
+    background-repeat: repeat;
+    background-position: right;
+}
+
+div {
+    background-color: rgb(231, 231, 180);
+    border-color: rgb(80, 80, 179);
+    border-width: 5px;
+    border-style: dotted;
+}
+
+span{
+    background: rgb(88, 88, 160);
+    color: rgb(231, 231, 180);
+}
+
+
+.testClass {
+    color: rgb(61, 61, 170);
+}
+
+#endID{
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+h6 + ul{
+    color: rgb(235, 145, 182);
+}
+
+li a{
+    color: rgb(223, 163, 53);
+}
+
+li a[href="www.life.com"] {
+    color: blueviolet;
+    border: 10px solid grey;
+}
