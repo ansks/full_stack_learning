@@ -1,4 +1,4 @@
-# full_stack_learning
+# Full Stack Learning
 This is the full stack learning techs. It includes 
 - HTML5
 - CSS3
