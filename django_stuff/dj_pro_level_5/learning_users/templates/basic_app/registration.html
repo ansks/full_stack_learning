@@ -1,5 +1,5 @@
 {% extends 'basic_app/base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 {% block body_block %}
     <div class="jumbotron">
@@ -11,10 +11,13 @@
             <h2> Fill out the info below. </h2>
 
             <form enctype="multipart/form-data" method="post">
+
                 {% csrf_token %}
                 {{user_form.as_p}}
                 {{profile_form.as_p}}
-                <input type="button" name = '' value="Register">
+
+                <input type="submit" name = '' value="Register">
+
         {% endif %}
     </div>
 {% endblock %}
