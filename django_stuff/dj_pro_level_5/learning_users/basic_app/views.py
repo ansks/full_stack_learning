@@ -19,7 +19,9 @@ def index(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('index'))
+    # return HttpResponseRedirect(reverse('index'))
+    
+    return render(request=request, template_name='basic_app/thankyou.html')
 
 @login_required
 def special(request):
