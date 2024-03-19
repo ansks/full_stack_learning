@@ -12,7 +12,10 @@
         {% for student in school_detail.students.all %}
             <li><p> {{student.name}} is {{student.age}} old. Trust me. :P </p></li>
         {% endfor %}
+    </div>
 
+    <div class="container">
+        <p><a class="btn btn-warning" href = "{% url 'basic_app:update' pk=school_detail.pk %}">Update</a></p>
     </div>
 
 {% endblock %}
