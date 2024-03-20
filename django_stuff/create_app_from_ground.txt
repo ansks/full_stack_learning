@@ -51,6 +51,11 @@ python manage.py migrate
 Populating some data
 ### Password Setting for users
 
+Virtual environment:
+To install the environment: pip install virtualenv
+To create the environment: virtualenv env_name
+To Activate the environment: source dj_venv/bin/actiavte
+To Deactivate: deactivate
 
 
 

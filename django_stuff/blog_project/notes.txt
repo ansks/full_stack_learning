@@ -1,0 +1,33 @@
+Step 1: Starting with python Django project:
+    1. django-admin startproject mysite
+    2. cd mysite
+    3. python manage.py startapp blog or django-admin startapp blog
+    4. adding urls.py file in blog
+    5. adding forms.py file in blog since we will be adding some forms
+    6. setting.py ... add the app in the installed apps. 
+    7. python manage.py migrate 
+    8. python manage.py makemigrations blog
+    9. python manage.py migrate
+    10. python manage.py runserver
+
+Step 2: models.py
+    1. Setting up models.py -> importing modules/functions like timezone, urlresolvers, revese
+    2. Setting up model classes
+
+Step 3: Form.py
+    1. Setting up form.py file, it will bring the models 
+    and subfields which will be edited. 
+    2. We also set up the widgets which will be edited in 
+    css file. 
+    3. We will create "static" folder under the application 
+    rather that inside site, 
+    4. "static" folder will have two folders: css, js
+    5. Setup templates folder at the same lavel
+    6. Update the "settings.py" file with STATIC_ROOT, 
+    TEMPLATE_URL, LOGIN_REDIRECT_URL
+
+Step 4: View.py
+    1. import templates in the class based view and have html file of the view
+    2. Setup site> urls.py file it will point to application urls.py file
+    3. setup app urls.py file
+
