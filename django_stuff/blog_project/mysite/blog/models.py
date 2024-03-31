@@ -6,11 +6,11 @@ from django.urls import reverse
 class Post(models.Model):
     author = models.ForeignKey('auth.User', 
                                on_delete = models.CASCADE)
-    title = models.CharField(max_length = 256),
-    post = models.TextField(),
+    title = models.CharField(max_length = 256)
+    post = models.TextField()
     create_date = models.DateTimeField(default = 
-                                       timezone.now()),
-    published_date = models.DateTimeField(blank = True, 
+                                       timezone.now())
+    published_date = models.DateTimeField(blank = True,
                                           null = True)
     
     def publish(self):

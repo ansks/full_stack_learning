@@ -30,4 +30,11 @@ Step 4: View.py
     1. import templates in the class based view and have html file of the view
     2. Setup site> urls.py file it will point to application urls.py file
     3. setup app urls.py file
+    4. Every class of view should be updated in urls.py; 
+       some would be connected with the primary key 
+       (url requires specific data e.g. specific post) and 
+       some wont.
+
+Step 5: Creating Templates for the views
+
 
